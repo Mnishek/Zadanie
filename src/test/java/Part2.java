@@ -28,8 +28,7 @@ public class Part2 {
         cssPass.sendKeys("SuperSecretPassword!");
         WebElement cssClick2 = test.findElement(By.cssSelector(".radius"));
         cssClick2.click();
-        WebElement cssOk = test.findElement(By.id("flash"));
-        Assert.assertTrue(cssOk.getText().contains("You logged into a secure area!"));
+        WebElement cssOk = test.findElement(By.cssSelector("a[href='/logout']"));
         test.quit();
 
 
